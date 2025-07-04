@@ -38,7 +38,9 @@ app.get('/status', (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚄 Snowliner Player Tracker live at http://localhost:${PORT}`);
+const PORT = process.env.PORT ?? 8080;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚄 Snowliner Player Tracker live at http://0.0.0.0:${PORT}`);
 });
+
+
